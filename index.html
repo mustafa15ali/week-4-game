@@ -2,116 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <title>Crystal Game!</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" id="main-section">
+                    <div class="panel panel-default" id="main-panel">
+                        <div class="panel-heading" id="heading">Crystal Game!</div>
+                        <div class="panel-body" id="frist-panel"></div>
+                        <p>How to Play:</p>
+
+                        <p>Objective: Each crystal will generate a random number each time it's clicked. So the objective of
+                            this game is to generate random numbers by clicking on the crystals to generate random numbers
+                            and in order to win, you must garner a total of</p>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="jumbotron bg-primary text-center">
-                    <h1>Crystal Game!</h1>
+                        <p>Points:</p>
+
+                        <p id="TotalRandom"></p>
+
+                    </div>
+                </div>
+            </div>
+            <div id="TotalRandom">
+
+            </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" id="main-section">
+                    <div class="panel panel-default">
+                        <div class="panel-body"></div>
+                        <section id="Crystals">
+                            <img id="crystal111" src="https://openclipart.org/download/196319/crystal-blue-gold-gems-monster-brain-games.svg" width="200px">
+                            <img id="crystal222" src="https://openclipart.org/download/239077/Streetart-Crystals-for-artists-2016012942.svg" width="200px">
+                            <img id="crystal333" src="https://openclipart.org/download/190820/Cristaux.svg" width="200px">
+                            <img id="crystal444" src="https://openclipart.org/download/149149/crystals.svg" width="200px">
+                            <div class="card-body">
+                                <h1 class="card-title">CLICK CRYSTALS</h1>
+                        </section>
+
+                        <div class="row">
+
+                            <div class="card text-center col-md-3 ml-5">
+                                <div class="card-body">
+                                    <h2 class="card-title bg-danger">LOSSES</h2>
+                                    <p class="card-text" id="loser">-</p>
+                                    <p class="card-text">
+                                        <small class="text-muted"></small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-center col-md-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">TOTAL SCORE</h3>
+                                    <p class="card-text" id="CurrentScore">.</p>
+                                    <p class="card-text">
+                                        <small class="text-muted"></small>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card text-center col-md-3">
+                                <div class="card-body">
+                                    <h4 class="card-title bg-success">WINS</h4>
+                                    <p class="card-text" id="winner">-</p>
+                                    <p class="card-text">
+                                        <small class="text-muted"></small>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
 
-            <!-- CARD BEGINS HERE -->
-
-            <p class="card-text">
-                <small class="text-muted"></small>
-            </p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title text-center">How to play</h4>
-            <p class="card-text">Objective: Each crystal will generate a random number each time it's clicked. The objective of this game is to
-                generate random numbers by clicking on the crystals, and in order to win, you must garner a total of</p>
-            <p id="TotalRandom"></p>
-
-            <p>points</p>
-
-            <p class="card-text">
-                <small class="text-muted"></small>
-            </p>
-        </div>
-
-        <div id="TotalRandom">
-
-
-        </div>
-        <!-- <img class="card-img-bottom" src="..." alt="Card image cap"> -->
-
-
-    </div>
-
-    <div class="card mb-3">
-        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-        <div class="card-img-top ml-5 mr-5" id="Crystals">
-            <img id="crystal111" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
-            <img id="crystal222" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
-            <img id="crystal333" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
-            <img id="crystal444" src="https://openclipart.org/download/239076/Crystals-occur-in-nature-2016012906.svg" width="200px">
-
-        </div>
-
-
-        <div class="card-body">
-            <h4 class="card-title">CLICK CRYSTALS</h4>
-        </div>
-
-
-        <div class="row">
-
-            <div class="card text-center col-md-3 ml-5">
-                <div class="card-body">
-                    <h4 class="card-title bg-danger">LOSSES</h4>
-                    <p class="card-text" id="loser">.</p>
-                    <p class="card-text">
-                        <small class="text-muted"></small>
-                    </p>
-                </div>
-            </div>
-
-            <div class="card text-center col-md-3">
-                <div class="card-body">
-                    <h4 class="card-title">TOTAL SCORE</h4>
-                    <p class="card-text" id="CurrentScore">.</p>
-                    <p class="card-text">
-                        <small class="text-muted"></small>
-                    </p>
-                </div>
-            </div>
-
-            <div class="card text-center col-md-3">
-                <div class="card-body">
-                    <h4 class="card-title bg-success">WINS</h4>
-                    <p class="card-text" id="winner">.</p>
-                    <p class="card-text">
-                        <small class="text-muted"></small>
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <hr>
-
-
-        <br>
-        <br>
-    </div>
+    <!-- Scirpt -->
     <script src="./assets/javascript/game.js"></script>
-
 
 </body>
 
